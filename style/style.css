@@ -1,0 +1,457 @@
+/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+* {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+/* Caracteristicas del logo principal */
+
+.headerlogo {
+  height: 70px;
+  display: flex;
+  position: fixed;
+  margin-top: 5px;
+  margin-left: 70px;
+}
+
+/* Elementos menu navegacion cabecera */
+
+.menu {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  border-bottom: solid 1em #bd850c;
+}
+
+/* Franja cabecera */
+
+header {
+  background: black;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+/* Desplazamos el nav hacia la derecha */
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+  line-height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+/* Convertimos los elementos a en elementos bloque para manipular el padding */
+
+nav ul li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background: #bd850c;
+}
+
+/* Contenido Sobre Nosotros */
+
+.container-about-us {
+  padding-top: 200px;
+  padding-left: 200px;
+  padding-right: 200px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  text-align: justify;
+  align-items: center;
+}
+
+.text-about-us {
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+  text-align: center;
+  color: white;
+}
+
+.beer {
+  animation: bg 10s infinite ease-in-out;
+  border-radius: 20px;
+  width: 300px;
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 8px 12px black;
+  opacity: 0.9;
+}
+
+@keyframes bg {
+  0% {
+    background-image: url('../images/about/cervezas.jpg');
+  }
+
+  50% {
+    background-image: url('../images/about/tapas.jpg');
+  }
+
+  100% {
+    background-image: url('../images/about/cervezas.jpg');
+  }
+}
+
+.container-about-us h1 {
+  font-size: 2.3em;
+}
+
+.container-about-us h4 {
+  font-family: 'Shadows Into Light';
+  font-size: 1.4rem;
+}
+
+.container-about-us p {
+  font-size: 1.2rem;
+  justify-content: center;
+}
+
+/* Contenido donde estamos */
+
+.container-where-we-are {
+  padding: 100px 0;
+  max-width: 100%;
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.imgBar {
+  padding: 170px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+  box-shadow: 5px 8px 12px black;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.descBar {
+  text-align: center;
+  padding: auto;
+  font-family: 'Berkshire Swash', sans-serif;
+  /* -webkit-text-stroke: 0.6px black; */
+  font-size: 1.6rem;
+  color: white;
+  text-shadow: 0 0 8px rgba(0 0 0 0.8);
+}
+
+
+.imgBar:hover {
+  border: 5px solid #C39354;
+  border-radius: 10px;
+}
+
+/* Contenido Bebidas Bar */
+
+.container-drinks {
+  padding-bottom: 50px;
+}
+
+.titulo-menu {
+  border-radius: 10px;
+  background: #bd850c;
+  width: 80%;
+  line-height: 70px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.drink {
+  background-color: #bd850c;
+  padding-left: 5%;
+  text-align: justify;
+  display: block;
+  font-family: 'Bebas neue';
+  color: #fff;
+  font-size: 50px;
+  white-space: nowrap;
+  border-right: 1px solid;
+  border-color: #bd850c;
+  width: 12ch;
+  overflow: hidden;
+}
+.titulo-menu .drink {
+  animation: escribir 3s steps(30) infinite alternate-reverse;
+}
+
+.type-drinks {
+  padding-top: 20px;
+  max-width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.titleDrink {
+  font-size: 30px;
+  text-align: left;
+  font-family: 'Bebas neue';
+  text-decoration: underline;
+  color: #bd850c;
+  -webkit-text-stroke: 0.6px #bd850c;
+  text-shadow: 0 0 8px rgba(0 0 0 0.8);
+}
+
+.list-drinks {
+  padding-top: 10px;
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.nameDrink {
+  font-size: 25px;
+  text-align: left;
+  font-family: 'Bebas neue';
+  /* color: #bd850c; */
+  color: white;
+}
+
+.price {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bebas neue';
+  /* color: #bd850c; */
+  color: white;
+}
+
+/* Contenido Tapas Bar */
+
+.container-tapas {
+  padding-bottom: 100px;
+}
+
+.title-tapa {
+  background-color: #bd850c;
+  margin-left: 5%;
+  text-align: justify;
+  display: block;
+  font-family: 'Bebas neue';
+  color: #fff;
+  font-size: 50px;
+  white-space: nowrap;
+  border-right: 1px solid;
+  width: 12ch;
+  border-color: #bd850c;
+  animation: escribir 3s steps(30) infinite alternate-reverse;
+  overflow: hidden;
+}
+
+
+.type-tapa {
+  padding-top: 20px;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.titletapa {
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Bebas neue';
+  text-decoration: underline;
+  color: white;
+  -webkit-text-stroke: 0.6px white;
+  text-shadow: 0 0 8px rgba(0 0 0 0.8);
+}
+
+.list-tapas {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.tapa {
+  padding-top: 10px;
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+}
+
+.imgTapa {
+  padding: 75px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+  box-shadow: 5px 8px 12px black;
+}
+
+.nameTapa {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bebas neue';
+  color: white;
+}
+
+/* Contenido SuperTapas */
+
+.container-superTapas {
+  padding-bottom: 80px;
+}
+
+.title-superTapa {
+  background-color: #bd850c;
+  margin-left: 5%;
+  display: block;
+  font-family: 'Bebas neue';
+  color: #fff;
+  font-size: 50px;
+  white-space: nowrap;
+  border-right: 1px solid;
+  width: 20ch;
+  border-color: #bd850c;
+  animation: escribir 3s steps(30) infinite alternate-reverse;
+  overflow: hidden;
+}
+
+
+
+.list-superTapa {
+  padding-top: 40px;
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.superTapa {
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+}
+
+.imgsuperTapa {
+  padding: 100px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+  color: #bd850c;
+  border: 2px solid;
+  box-shadow: 5px 5px 10px #bd850c;
+}
+
+.namesuperTapa {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bebas neue';
+  color: white;
+  padding-top: calc(150px/2);
+}
+
+
+.pricesuperTapa {
+  font-size: 35px;
+  text-align: right;
+  font-family: 'Bebas neue';
+  color: #bd850c;
+  padding-top: calc(150px/2);
+}
+
+
+/* Contenido Tostas */
+
+.container-Tostas {
+  padding-bottom: 100px;
+}
+
+.title-Tostas {
+  background-color: #bd850c;
+  margin-left: 5%;
+  display: block;
+  font-family: 'Bebas neue';
+  color: #fff;
+  font-size: 50px;
+  white-space: nowrap;
+  border-right: 1px solid;
+  width: 22ch;
+  border-color: #bd850c;
+  animation: escribir 3s steps(30) infinite alternate-reverse;
+  overflow: hidden;
+}
+
+
+
+.list-Tostas {
+  padding-top: 40px;
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.Tostas {
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+}
+
+.imgTostas {
+  padding: 100px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+  color: #bd850c;
+  border: 2px solid;
+  box-shadow: 5px 5px 10px #bd850c;
+}
+
+.nameTostas {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bebas neue';
+  color: white;
+  padding-top: calc(150px/2);
+}
+
+
+.priceTostas {
+  font-size: 35px;
+  text-align: right;
+  font-family: 'Bebas neue';
+  color: #bd850c;
+  padding-top: calc(150px/2);
+}
+
+@keyframes escribir{
+  from {
+    width: 30;
+  }
+  to{
+    width: 0;
+  }
+}
